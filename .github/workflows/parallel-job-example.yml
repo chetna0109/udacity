@@ -1,9 +1,14 @@
+# Workflow name
 name: parallel-job-example
+
+# Triggers for the workflow
 on:
+  # Automatic trigger on push events to the main branch
   push:
     branches:
       - main
- jobs:
+
+jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -14,6 +19,7 @@ on:
           - platform: macos-latest
             node-version: 14
       fail-fast: false
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
