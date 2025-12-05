@@ -1,10 +1,8 @@
 # Workflow name
 name: parallel-job-example
-
 # Triggers for the workflow
 on:
- 
-  # Automatic trigger on push events to the main branch
+ # Automatic trigger on push events to the main branch
   push:
     branches:
       - main
